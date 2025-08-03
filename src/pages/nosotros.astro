@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+// You could import images here if you have them locally
+// import Coach1 from '../assets/coach1.jpg';
+// import Coach2 from '../assets/coach2.jpg';
+// import Coach3 from '../assets/coach3.jpg';
+import angelImage from '../assets/test.jpeg'; // Import the image here
+
+---
+<Layout>
+  <div class="container mx-auto p-8 text-center">
+    <h1 class="text-4xl font-bold text-red-600 mb-6">Nuestra Filosofía</h1>
+    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
+      Somos tres competidores apasionados que han llevado su jiu-jitsu a lo más alto en torneos de la IBJJF. En Cogito Pro Bellum, compartimos la mentalidad y las técnicas que nos han convertido en campeones.
+    </p>
+  </div>
+
+  <section class="bg-gray-900 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-white text-center mb-12">Conoce a los Entrenadores</h2>
+      
+      <div class="flex flex-col items-center">
+        <div class="flex overflow-x-scroll snap-x snap-mandatory space-x-6 pb-6 lg:pb-0 scrollbar-hide">
+          
+          <div class="flex-shrink-0 snap-center w-full md:w-1/3 lg:w-1/4">
+            <div class="bg-gray-800 rounded-lg shadow-xl p-8 text-center h-full">
+            <img src={angelImage.src} alt="Ángel BJJ" class="rounded-full w-40 h-40 mx-auto mb-4 object-cover border-4 border-red-600">
+              <h3 class="text-2xl font-bold text-red-600 mb-2">Ángel BJJ</h3>
+              <p class="text-gray-300 font-semibold mb-2">Campeón IBJJF European & Madrid</p>
+              <p class="text-gray-400">Especialista en guardia y control posicional. Con una mente de estratega, te enseña a pensar un paso por delante de tus oponentes.</p>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 snap-center w-full md:w-1/3 lg:w-1/4">
+            <div class="bg-gray-800 rounded-lg shadow-xl p-8 text-center h-full">
+              <img src="https://via.placeholder.com/200" alt="Ivan Matilla" class="rounded-full w-40 h-40 mx-auto mb-4 object-cover border-4 border-red-600">
+              <h3 class="text-2xl font-bold text-red-600 mb-2">Ivan Matilla</h3>
+              <p class="text-gray-300 font-semibold mb-2">Campeón IBJJF European & Madrid</p>
+              <p class="text-gray-400">Maestro de las finalizaciones y las transiciones rápidas. Su juego agresivo te inspirará a ser más decisivo en el tapiz.</p>
+            </div>
+          </div>
+          
+          <div class="flex-shrink-0 snap-center w-full md:w-1/3 lg:w-1/4">
+            <div class="bg-gray-800 rounded-lg shadow-xl p-8 text-center h-full">
+              <img src="https://via.placeholder.com/200" alt="Coach 3 Name" class="rounded-full w-40 h-40 mx-auto mb-4 object-cover border-4 border-red-600">
+              <h3 class="text-2xl font-bold text-red-600 mb-2">Coach 3</h3>
+              <p class="text-gray-300 font-semibold mb-2">Campeón IBJJF European & Madrid</p>
+              <p class="text-gray-400">Especialista en la lucha de pie y en derribos explosivos. Te enseñará a dominar la fase inicial del combate.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
