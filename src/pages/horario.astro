@@ -2,8 +2,36 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
-  <div class="container mx-auto p-8">
-    <h1 class="text-4xl font-bold text-center mb-6">Horario</h1>
-    <p class="text-lg text-center text-gray-700">Aquí encontrarás nuestros horarios de clases.</p>
-  </div>
+  <section class="py-20 px-4 bg-gray-900 dark:bg-gray-50">
+    <div class="container mx-auto p-8">
+      <h2 class="text-4xl font-extrabold text-red-600 mb-6 text-center">Horario de Clases</h2>
+      <p class="text-xl text-center text-gray-400 dark:text-gray-700 mb-10 max-w-2xl mx-auto">
+        Aquí encontrarás nuestros horarios semanales. ¡Entrena a tu propio ritmo y lleva tu jiu-jitsu al siguiente nivel!
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 rounded-xl overflow-hidden shadow-2xl">
+          <thead>
+            <tr class="bg-red-600 text-left">
+              <th class="py-3 px-4 uppercase font-semibold text-sm">Día</th>
+              <th class="py-3 px-4 uppercase font-semibold text-sm">Horario</th>
+              <th class="py-3 px-4 uppercase font-semibold text-sm">Clase</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-300 dark:text-gray-700">
+            <tr>
+              <td class="py-4 px-4 border-b border-gray-700 dark:border-gray-300">Lunes</td>
+              <td class="py-4 px-4 border-b border-gray-700 dark:border-gray-300">19:00 - 21:00</td>
+              <td class="py-4 px-4 border-b border-gray-700 dark:border-gray-300">Jiu-Jitsu Brasileño</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 border-b border-gray-700 dark:border-gray-300">Martes</td>
+              <td class="py-4 px-4 border-b border-gray-700 dark:border-gray-300">19:00 - 21:00</td>
+              <td class="py-4 px-4 border-b border-gray-700 dark:border-gray-300">Jiu-Jitsu Brasileño</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 </Layout>

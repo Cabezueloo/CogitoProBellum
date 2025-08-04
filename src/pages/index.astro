@@ -2,35 +2,46 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
-  <section class="text-center py-24 px-4 bg-gray-900">
-    <h1 class="text-6xl font-black text-red-600 mb-4 uppercase leading-tight">
-      Domina el Arte. Conquista el Torneo.
-    </h1>
-    <p class="text-2xl text-gray-400 max-w-4xl mx-auto mb-10">
-      En Cogito Pro Bellum, convertimos la estrategia en victoria. Aprende de campeones que han pisado el podio de la IBJJF.
-    </p>
-    <a href="/contacto" class="inline-block bg-red-600 text-white font-bold text-xl py-4 px-10 rounded-full shadow-lg hover:bg-red-700 transition-colors duration-300 transform hover:scale-105">
-      Únete a los Campeones
-    </a>
-  </section>
+  <section class="text-center py-24 px-4 bg-gray-900 dark:bg-gray-50">
+  <h1 class="text-6xl font-black text-red-600 mb-4 uppercase leading-tight">
+    Entrena como un Campeón.
+  </h1>
+  <p class="text-2xl text-gray-400 dark:text-gray-700 max-w-4xl mx-auto mb-10">
+    En Cogito Pro Bellum, forjamos la estrategia y la disciplina necesarias para triunfar. A pesar de ser cinturones azules, ya hemos pisado los podios más prestigiosos de Europa.
+  </p>
+  <a href="/contacto" class="inline-block bg-red-600 text-white font-bold text-xl py-4 px-10 rounded-full shadow-lg hover:bg-red-700 transition-colors duration-300 transform hover:scale-105">
+    Únete a la victoria
+  </a>
+</section>
 
-  <section class="py-20 px-4 bg-gray-800">
-    <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-4xl font-extrabold text-red-600 mb-12">Nuestros Logros</h2>
-      <div class="grid md:grid-cols-2 gap-10">
-        <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300">
-          <p class="text-3xl font-bold text-red-600 mb-2">IBJJF European</p>
-          <p class="text-gray-400 text-lg">
-            Medallistas de oro en el campeonato más prestigioso de Europa. Entrenamos para ganar en el escenario mundial.
-          </p>
-        </div>
-        <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300">
-          <p class="text-3xl font-bold text-red-600 mb-2">IBJJF Madrid</p>
-          <p class="text-gray-400 text-lg">
-            Dominamos la competición local y regional, con un palmarés de victorias que habla por sí mismo.
-          </p>
-        </div>
+  <section class="py-20 px-4 bg-gray-800 dark:bg-white">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold text-red-600 mb-12">Nuestros Logros</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-gray-900 dark:bg-gray-200 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300">
+        <p class="text-3xl font-bold text-red-600 mb-2">IBJJF European</p>
+        <p class="text-gray-400 dark:text-gray-700 text-lg">
+          Medallistas de oro en el campeonato más prestigioso de Europa. Entrenamos para el escenario mundial.
+        </p>
+        <p class="mt-4 text-gray-500 dark:text-gray-600 text-sm">Angel Cabezuelo (🥇), Iván Matilla (🥉)</p>
+      </div>
+
+      <div class="bg-gray-900 dark:bg-gray-200 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300">
+        <p class="text-3xl font-bold text-red-600 mb-2">Campeonato de España 2025</p>
+        <p class="text-gray-400 dark:text-gray-700 text-lg">
+          Dominio total a nivel nacional con 3 medallas de oro para el equipo.
+        </p>
+        <p class="mt-4 text-gray-500 dark:text-gray-600 text-sm">Angel Cabezuelo (🥇), Iván Matilla (🥇), Angel Gomez (🥇)</p>
+      </div>
+
+      <div class="bg-gray-900 dark:bg-gray-200 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300">
+        <p class="text-3xl font-bold text-red-600 mb-2">IBJJF y MMA</p>
+        <p class="text-gray-400 dark:text-gray-700 text-lg">
+          Múltiples medallas de oro en la IBJJF y victorias en combates amateur de MMA.
+        </p>
+        <p class="mt-4 text-gray-500 dark:text-gray-600 text-sm">3 oros en IBJJF Madrid/Lisboa 2024. 3 victorias en MMA amateur.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </Layout>

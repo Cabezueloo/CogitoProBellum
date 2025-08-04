@@ -1,20 +1,46 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '../styles/global.css'; // This is crucial!
+import '../styles/global.css';
 ---
 <!DOCTYPE html>
 <html lang="es">
   <head>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    </head>
-  <body class="bg-gray-950 text-gray-200 font-sans flex flex-col min-h-screen">
+    <title>Cogito Pro Bellum</title>
+  </head>
+  <body class="bg-gray-900 dark:bg-gray-50 text-gray-200 dark:text-gray-800 font-sans flex flex-col min-h-screen">
     <Header />
     <main class="flex-grow">
       <slot />
     </main>
     <Footer />
+    
+    <button id="theme-toggle" class="fixed bottom-4 right-4 p-3 rounded-full bg-gray-700 dark:bg-gray-300 text-white dark:text-gray-800 shadow-lg transition hover:bg-gray-600 focus:outline-none z-50">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+      </svg>
+    </button>
   </body>
+  <script is:inline>
+    const themeToggle = document.getElementById('theme-toggle');
+    const rootHtml = document.documentElement;
+
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      rootHtml.classList.add('dark');
+    } else {
+      rootHtml.classList.remove('dark');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      if (rootHtml.classList.contains('dark')) {
+        rootHtml.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        rootHtml.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    });
+  </script>
 </html>

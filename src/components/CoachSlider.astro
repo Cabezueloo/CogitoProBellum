@@ -1,0 +1,104 @@
+---
+import { Image } from 'astro:assets';
+import coach1Image from '../assets/test.jpeg';
+import coach2Image from '../assets/test.jpeg';
+import coach3Image from '../assets/test.jpeg';
+
+const coaches = [
+  {
+    name: "Angel Cabezuelo",
+    image: coach1Image,
+    bio: "Entrenador principal con 15 años de experiencia en BJJ. Especialista en técnicas de suelo y judo. Ha competido a nivel nacional e internacional.",
+    instagram: "@angeel.bjj"
+  },
+  {
+    name: "Ivan Matilla",
+    image: coach2Image,
+    bio: "Cinturón negro de BJJ y experto en defensa personal. Con una metodología de enseñanza enfocada en la disciplina y la técnica perfecta.",
+    instagram: "@ivanmatillap"
+  },
+  {
+    name: "Angel Gomez",
+    image: coach3Image,
+    bio: "Campeona nacional de jiu-jitsu femenino y una fuerza imparable en el tatami. Su enfoque es empoderar a los estudiantes a través del BJJ.",
+    instagram: "@anngeeel_5"
+  }
+];
+
+const totalSlides = coaches.length;
+---
+
+<div class="relative overflow-hidden w-full max-w-4xl mx-auto rounded-xl shadow-2xl bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-800">
+  
+  <button id="prev-button" class="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/50 dark:text-gray-900 dark:bg-white/50 p-2 rounded-full hover:bg-black/75 dark:hover:bg-white/75 transition z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+  
+  <button id="next-button" class="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/50 dark:text-gray-900 dark:bg-white/50 p-2 rounded-full hover:bg-black/75 dark:hover:bg-white/75 transition z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+
+  <div id="slider-container" class="flex transition-transform duration-500 ease-in-out">
+    {coaches.map((coach, index) => (
+      <div key={index} class="flex-shrink-0 flex flex-col md:flex-row items-center p-8 gap-8">
+        <div class="md:w-1/2 flex justify-center md:justify-start">
+          <Image 
+            src={coach.image} 
+            alt={`Foto de ${coach.name}`} 
+            width={320}
+            height={320}
+            class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-red-600" 
+          />
+        </div>
+        <div class="md:w-1/2 text-center md:text-left">
+          <h3 class="text-3xl font-bold text-red-600 mb-2">{coach.name}</h3>
+          <p class="text-gray-300 dark:text-gray-700 text-lg mb-4">{coach.bio}</p>
+          <a href={`https://www.instagram.com/${coach.instagram.substring(1)}`} target="_blank" class="text-red-500 hover:text-red-400 transition-colors duration-300 font-semibold">
+            Sígueme en {coach.instagram}
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script type="module">
+  const container = document.getElementById('slider-container');
+  const slides = container.children;
+  let currentSlide = 0;
+
+  const totalSlides = slides.length;
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    const offset = -currentSlide * 100;
+    container.style.transform = `translateX(${offset}%)`;
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    const offset = -currentSlide * 100;
+    container.style.transform = `translateX(${offset}%)`;
+  }
+
+  document.getElementById('next-button').addEventListener('click', nextSlide);
+  document.getElementById('prev-button').addEventListener('click', prevSlide);
+
+  setInterval(nextSlide, 10000);
+</script>
+
+<style scoped>
+  #slider-container {
+    display: flex;
+    width: 100%;
+  }
+
+  #slider-container > div {
+    flex-shrink: 0;
+    width: 100%;
+  }
+</style>
