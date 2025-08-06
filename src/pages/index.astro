@@ -3,44 +3,121 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
   <section class="text-center py-24 px-4 bg-gray-900 dark:bg-gray-50">
-  <h1 class="text-6xl font-black text-red-600 mb-4 uppercase leading-tight">
-    Entrena como un Campeón.
-  </h1>
-  <p class="text-2xl text-gray-400 dark:text-gray-700 max-w-4xl mx-auto mb-10">
-    En Cogito Pro Bellum, forjamos la estrategia y la disciplina necesarias para triunfar. A pesar de ser cinturones azules, ya hemos pisado los podios más prestigiosos de Europa.
-  </p>
-  <a href="/contacto" class="inline-block bg-red-600 text-white font-bold text-xl py-4 px-10 rounded-full shadow-lg hover:bg-red-700 transition-colors duration-300 transform hover:scale-105">
-    Únete a la victoria
-  </a>
-</section>
+    <h1 class="text-5xl md:text-5xl font-black text-red-600 mb-4 uppercase leading-tight">
+      Cogito Pro Bellum Academia de Jiu Jitsu
+    </h1>
+    <p class="text-xl text-gray-400 dark:text-gray-700 max-w-4xl mx-auto mb-10">
+      Aprende Jiu-Jitsu Brasileño (BJJ) con campeones. Clases para todos los niveles, desde iniciación hasta competición.
+    </p>
+    <a href="/contacto" class="inline-block bg-red-600 text-white font-bold text-xl py-4 px-10 rounded-full shadow-lg hover:bg-red-700 transition-colors duration-300 transform hover:scale-105">
+      Empieza a Entrenar
+    </a>
+  </section>
 
-  <section class="py-20 px-4 bg-gray-800 dark:bg-white">
+  <section class="py-20 px-4 text-center bg-gray-800 dark:bg-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-extrabold text-white dark:text-gray-900 mb-4">
+        El <span class="text-red-600">jiu jitsu</span> más actualizado en Polinyà de Xúquer
+      </h2>
+      <p class="text-xl text-gray-400 dark:text-gray-600 mb-8">
+        Tres maestros con diferentes estilos, listos para seguir aprendiendo y enseñando.
+      </p>
+      <a href="/nosotros" class="inline-block border-2 border-red-600 text-red-600 font-bold text-lg py-3 px-8 rounded-full hover:bg-red-600 hover:text-white transition-all duration-300 transform hover:scale-105">
+        Saber más de nosotros
+      </a>
+    </div>
+  </section>
+<section class="py-20 px-4 bg-gray-900 dark:bg-white">
   <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-4xl font-extrabold text-red-600 mb-12">Nuestros Logros</h2>
+    <h2 class="text-4xl font-extrabold text-red-600 mb-6">Nuestros Logros</h2>
+    <p class="text-lg text-gray-400 dark:text-gray-700 max-w-2xl mx-auto mb-12">
+      El trabajo duro, la disciplina y el talento de nuestro equipo se ven reflejados en cada competencia. Aquí están los logros más destacados de nuestros atletas.
+    </p>
+
     <div class="grid md:grid-cols-3 gap-10">
-      <div class="bg-gray-900 dark:bg-gray-200 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300">
-        <p class="text-3xl font-bold text-red-600 mb-2">IBJJF European</p>
-        <p class="text-gray-400 dark:text-gray-700 text-lg">
-          Medallistas de oro en el campeonato más prestigioso de Europa. Entrenamos para el escenario mundial.
-        </p>
-        <p class="mt-4 text-gray-500 dark:text-gray-600 text-sm">Angel Cabezuelo (🥇), Iván Matilla (🥉)</p>
+      
+      <div class="bg-gray-800 dark:bg-gray-200 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300 text-left">
+        <h3 class="text-3xl font-bold text-red-600 mb-4">Ángel Cabezuelo</h3>
+        <ul class="space-y-3 text-gray-400 dark:text-gray-700 text-lg">
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>IBJJF European 2024:</b> Medallista de oro.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>World Cup BJJ 2025:</b> Campeón.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>Campeonato de España 2025:</b> Campeón.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>IBJJF Madrid 2024:</b> Medalla de oro.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>IBJJF Lisbon 2024:</b> Medalla de oro.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🏆</span>
+            <span><b>MMA Amateur:</b> Récord de 2-0.</span>
+          </li>
+        </ul>
       </div>
 
-      <div class="bg-gray-900 dark:bg-gray-200 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300">
-        <p class="text-3xl font-bold text-red-600 mb-2">Campeonato de España 2025</p>
-        <p class="text-gray-400 dark:text-gray-700 text-lg">
-          Dominio total a nivel nacional con 3 medallas de oro para el equipo.
-        </p>
-        <p class="mt-4 text-gray-500 dark:text-gray-600 text-sm">Angel Cabezuelo (🥇), Iván Matilla (🥇), Angel Gomez (🥇)</p>
+      <div class="bg-gray-800 dark:bg-gray-200 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300 text-left">
+        <h3 class="text-3xl font-bold text-red-600 mb-4">Iván Matilla</h3>
+        <ul class="space-y-3 text-gray-400 dark:text-gray-700 text-lg">
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>Campeonato de España 2025:</b> Campeón.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥉</span>
+            <span><b>IBJJF European 2024:</b> Medallista de bronce.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>IBJJF Madrid 2024:</b> Medalla de oro.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>IBJJF Lisbon 2024:</b> Medalla de oro.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🏆</span>
+            <span><b>MMA Amateur:</b> Récord de 1-0.</span>
+          </li>
+        </ul>
       </div>
 
-      <div class="bg-gray-900 dark:bg-gray-200 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300">
-        <p class="text-3xl font-bold text-red-600 mb-2">IBJJF y MMA</p>
-        <p class="text-gray-400 dark:text-gray-700 text-lg">
-          Múltiples medallas de oro en la IBJJF y victorias en combates amateur de MMA.
-        </p>
-        <p class="mt-4 text-gray-500 dark:text-gray-600 text-sm">3 oros en IBJJF Madrid/Lisboa 2024. 3 victorias en MMA amateur.</p>
+      <div class="bg-gray-800 dark:bg-gray-200 p-8 rounded-xl shadow-2xl border-l-4 border-red-600 transform hover:-translate-y-2 transition-transform duration-300 text-left">
+        <h3 class="text-3xl font-bold text-red-600 mb-4">Ángel Gómez</h3>
+        <ul class="space-y-3 text-gray-400 dark:text-gray-700 text-lg">
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>Campeonato de España 2025:</b> Campeón.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>IBJJF Madrid 2024:</b> Medalla de oro.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>World Cup BJJ 2025:</b> Campeón.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🥇</span>
+            <span><b>IBJJF Lisbon 2024:</b> Medalla de oro.</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-2xl">🏆</span>
+            <span><b>MMA Amateur:</b> Récord de 1-1.</span>
+          </li>
+        </ul>
       </div>
+
     </div>
   </div>
 </section>
