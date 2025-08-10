@@ -6,6 +6,7 @@ import SpeedInsights from '@vercel/speed-insights/astro';
 import '../styles/global.css';
 import faviconImg from '../assets/favicon.ico'
 ---
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -13,7 +14,85 @@ import faviconImg from '../assets/favicon.ico'
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cogito Pro Bellum</title>
 <link rel="icon" type="image/x-icon" href={faviconImg}>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Cogito Pro Bellum Jiu Jitsu",
+  "description": "Academia de Jiu-Jitsu Brasileño (BJJ) en Polinyà de Xúquer, Valencia, con clases para todos los niveles impartidas por campeones.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer Sant Antoni, 32",
+    "addressLocality": "Polinyà de Xúquer",
+    "postalCode": "46688",
+    "addressRegion": "Valencia",
+    "addressCountry": "ES"
+  },
+  "url": "https://www.cpbjiujitsu.com",
+  "image": "https://www.yourwebsite.com/og-image.jpg", // A link to a main image of your gym
+  "telephone": "+655160283", // <-- IMPORTANT: Add your phone number
+  "priceRange": "€€",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Clases de Jiu Jitsu",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Adults BJJ (Gi)"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Adults No-Gi"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kids BJJ (Gi)"
+        }
+      }
+    ]
+  },
+  "openingHoursSpecification": [ // <-- Update with your actual schedule
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Wednesday", "Friday"],
+      "opens": "09:00",
+      "closes": "10:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Wednesday"],
+      "opens": "18:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Thursday"],
+      "opens": "09:00",
+      "closes": "10:00"
+    },
+     {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Thursday"],
+      "opens": "17:15",
+      "closes": "18:15"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "17:00",
+      "closes": "18:00"
+    }
+  ]
+}
+</script>
   </head>
   <body class="bg-gray-900 dark:bg-gray-50 text-gray-200 dark:text-gray-800 font-sans flex flex-col min-h-screen">
     <Header />
