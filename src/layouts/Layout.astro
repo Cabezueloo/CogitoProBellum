@@ -1,17 +1,20 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Analytics from '@vercel/analytics/astro';
-import SpeedInsights from '@vercel/speed-insights/astro';
-import '../styles/global.css';
-import faviconImg from '../assets/favicon.ico'
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import "../styles/global.css";
+import faviconImg from "../assets/favicon.ico";
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
   <head>
+    <link rel="canonical" href="https://www.cpbjiujitsu.com/">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Academia de Jiu Jitsu Cogito Pro Bellum en Polinyà del Xúquer</title>
+    <title>Cogito Pro Bellum Jiu Jitsu</title>
 
     <meta name="description" content="Aprende Brazilian Jiu-Jitsu en Polinyà del Xúquer con instructores expertos: Ángel Cabezuelo, Ángel Gómez e Iván Matilla. Clases para todos los niveles en nuestra academia Cogito Pro Bellum." />
 
@@ -20,41 +23,126 @@ import faviconImg from '../assets/favicon.ico'
     <meta name="author" content="Cogito Pro Bellum" />
     
     <link rel="icon" type="image/x-icon" href={faviconImg}>
+    <meta
+      name="description"
+      content="Academia de Jiu-Jitsu Brasileño en Polinyà de Xúquer, Valencia. Clases de BJJ Gi, No-Gi y Kids con entrenadores campeones. ¡Aprende, entrena y compite"
+    />
+    <meta
+      name="keywords"
+      content="Jiu Jitsu, BJJ, Brazilian Jiu-Jitsu, No-Gi, artes marciales, defensa personal, academia Polinyà de Xúquer, Valencia, deportes de contacto"
+    />
+    <meta
+      property="og:title"
+      content="Cogito Pro Bellum Jiu-Jitsu | Academia en Polinyà de Xúquer"
+    />
+    <meta
+      property="og:description"
+      content="Academia de Jiu-Jitsu Brasileño en Polinyà de Xúquer, Valencia. Clases para adultos y niños."
+    />
+   
+    <meta property="og:url" content="https://www.cpbjiujitsu.com" />
+    <meta property="og:type" content="website" />
+
+    <meta
+      name="twitter:title"
+      content="Cogito Pro Bellum Jiu-Jitsu | Academia en Polinyà de Xúquer"
+    />
+    <meta
+      name="twitter:description"
+      content="Academia de BJJ en Polinyà de Xúquer, Valencia. Aprende, entrena y compite."
+    />
+    <title>Cogito Pro Bellum Jiu Jistu</title>
+    <link rel="icon" type="image/x-icon" href={faviconImg} />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Cogito Pro Bellum Jiu Jitsu",
+  "description": "Academia de Jiu-Jitsu Brasileño (BJJ) en Polinyà de Xúquer, Valencia, con clases para todos los niveles impartidas por campeones.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer Sant Antoni, 32",
+    "addressLocality": "Polinyà de Xúquer",
+    "postalCode": "46688",
+    "addressRegion": "Valencia",
+    "addressCountry": "ES"
+  },
+  "url": "https://www.cpbjiujitsu.com",
+  "image": "https://www.cpbjiujitsu.com/favicon.ico",
+  "telephone": "+34 655 160 283",
+  "priceRange": "€€",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Clases de Jiu Jitsu",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Adults BJJ (Gi)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Adults No-Gi" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kids BJJ (Gi)" } }
+    ]
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Friday"], "opens": "09:00", "closes": "10:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday"], "opens": "18:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday"], "opens": "09:00", "closes": "10:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday"], "opens": "17:15", "closes": "18:15" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "17:00", "closes": "18:00" }
+  ]
+}
+</script>
+
   </head>
-  <body class="bg-gray-900 dark:bg-gray-50 text-gray-200 dark:text-gray-800 font-sans flex flex-col min-h-screen">
+  <body
+    class="bg-gray-900 dark:bg-gray-50 text-gray-200 dark:text-gray-800 font-sans flex flex-col min-h-screen"
+  >
     <Header />
     <main class="flex-grow">
       <slot />
     </main>
     <Footer />
 
-    <button id="theme-toggle" class="fixed bottom-4 right-4 p-3 rounded-full bg-gray-700 dark:bg-gray-300 text-white dark:text-gray-800 shadow-lg transition hover:bg-gray-600 focus:outline-none z-50">
-      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+    <button
+      id="theme-toggle"
+      class="fixed bottom-4 right-4 p-3 rounded-full bg-gray-700 dark:bg-gray-300 text-white dark:text-gray-800 shadow-lg transition hover:bg-gray-600 focus:outline-none z-50"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+        ></path>
       </svg>
     </button>
 
     <Analytics />
     <SpeedInsights />
-
   </body>
   <script is:inline>
-    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggle = document.getElementById("theme-toggle");
     const rootHtml = document.documentElement;
 
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      rootHtml.classList.add('dark');
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      rootHtml.classList.add("dark");
     } else {
-      rootHtml.classList.remove('dark');
+      rootHtml.classList.remove("dark");
     }
 
-    themeToggle.addEventListener('click', () => {
-      if (rootHtml.classList.contains('dark')) {
-        rootHtml.classList.remove('dark');
-        localStorage.theme = 'light';
+    themeToggle.addEventListener("click", () => {
+      if (rootHtml.classList.contains("dark")) {
+        rootHtml.classList.remove("dark");
+        localStorage.theme = "light";
       } else {
-        rootHtml.classList.add('dark');
-        localStorage.theme = 'dark';
+        rootHtml.classList.add("dark");
+        localStorage.theme = "dark";
       }
     });
   </script>
