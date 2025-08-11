@@ -1,0 +1,25 @@
+---
+interface Props {
+  id: string; // El ID del video de YouTube
+  title: string; // Un título descriptivo para la accesibilidad
+}
+
+const { id, title } = Astro.props;
+---
+
+<div class="w-full max-w-xs mx-auto my-8">
+  {/* La clave está aquí:
+    - aspect-[9/16]: Fuerza el contenedor a tener una proporción vertical.
+    - max-w-xs: Limita el ancho máximo para que no se vea demasiado grande en pantallas de escritorio.
+  */}
+  <div class="aspect-[9/16] w-full rounded-xl overflow-hidden shadow-2xl">
+    <iframe
+      src={`https://www.youtube.com/embed/${id}`}
+      title={title}
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      class="w-full h-full"
+    ></iframe>
+  </div>
+</div>
