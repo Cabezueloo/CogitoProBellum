@@ -1,26 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CoachSlider from '../components/CoachSlider.astro';
+import YouTube from '../components/Youtube.astro'; // 1. Importa el nuevo componente
 ---
 <Layout>
   <div class="container mx-auto p-8 text-center">
     <h1 class="text-4xl font-bold text-red-600 mb-6">Nuestros Entrenadores</h1>
     <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
-      Conoce a los instructores que te guiarán en tu camino por el Brazilian Jiu-Jitsu. Ángel Cabezuelo, Ángel Gómez e Iván Matilla son nuestro equipo de campeones.
+      Conoce a nuestros entrenadores.
+      Cada uno con un estilo de pelea diferente
     </p>
 
     <CoachSlider />
 
-    <div class="mt-12 text-center">
+    <div class="mt-16 text-center">
+      <h2 class="text-3xl font-bold text-red-600 mb-6">Siente la energía del tatami 🥋</h2>
+      <YouTube 
+        id="buGlv1DmZGI" 
+        title="Video de demostración de Jiu-Jitsu Brasileño"
+      />
+    </div>
+
+    <div class="mt-16 text-center">
       <h2 class="text-2xl font-bold text-red-600 mb-4">Síguenos en Instagram</h2>
       <div class="bg-gray-900 rounded-xl shadow-xl p-8 max-w-lg mx-auto">
         <a href="https://www.instagram.com/cpbjiujitsu" target="_blank" class="block text-lg font-semibold text-gray-300 hover:text-red-500 transition-colors duration-300">
           @cpbjiujitsu
         </a>
       </div>
-      <p class="text-gray-400 mt-8">
-        Pronto añadiremos un formulario de contacto aquí.
-      </p>
     </div>
   </div>
 </Layout>
