@@ -1,66 +1,82 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// 1. Define your schedule data in one place
-const schedule = [
-  {
-    day: "Lunes",
-    classes: [
-      { time: "09:00 - 10:00", name: "Adults BJJ", coach: "Iván Matilla" },
-      { time: "18:00 - 19:00", name: "Adults BJJ", coach: "Ángel Cabezuelo" },
-    ],
-  },
-  {
-    day: "Martes",
-    classes: [
-      { time: "09:00 - 10:00", name: "Adults NoGi", coach: "Ángel Gómez" },
-      { time: "17:15 - 18:15", name: "Kids GI", coach: "Ángel Gómez" },
-    ],
-  },
-  {
-    day: "Miércoles",
-    classes: [
-      { time: "09:00 - 10:00", name: "Adults BJJ", coach: "Iván Matilla" },
-      { time: "18:00 - 19:00", name: "Adults BJJ", coach: "Ángel Cabezuelo" },
-      
-    ],
-  },
-  {
-    day: "Jueves",
-    classes: [
-      { time: "09:00 - 10:00", name: "Adults NoGi", coach: "Ángel Gómez" },
-      { time: "17:15 - 18:15", name: "Kids GI", coach: "Ángel Gómez" },
-    ],
-  },
-  {
-    day: "Viernes",
-    classes: [
-      { time: "09:00 - 10:00", name: "Adults BJJ", coach: "Iván Matilla" },
-      { time: "17:00 - 18:00", name: "Adults BJJ", coach: "Ángel Cabezuelo" },
-    ],
-  },
-];
+import { schedule } from '../data/scheduleData.js'; 
+import ScheduleCard from '../components/ScheduleCard.astro'; 
 ---
+ <script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+    const totalItems = carouselItems.length;
 
+    // Función para actualizar la posición del carrusel
+    const updateCarousel = () => {
+      const offset = -currentIndex * 100; // 100% por cada elemento
+      carousel.style.transform = `translateX(${offset}%)`;
+    };
+
+    // Evento para el botón "Siguiente"
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateCarousel();
+    });
+
+    // Evento para el botón "Anterior"
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      updateCarousel();
+    });
+  });
+</script>
 <Layout>
-  <section class="py-20 px-4 bg-gray-900 dark:bg-gray-50">
-    <div class="container mx-auto p-8">
-      <h2 class="text-4xl font-extrabold text-red-600 mb-6 text-center">Horario de Clases</h2>
-      <p class="text-xl text-center text-gray-400 dark:text-gray-700 mb-10 max-w-2xl mx-auto">
+  <section class="py-12 px-4 bg-gray-900 dark:bg-gray-50 md:py-20">
+    <div class="container mx-auto p-2 md:p-4">
+      <h2 class="text-3xl font-extrabold text-red-600 mb-4 text-center md:text-4xl">Horario de Clases</h2>
+      <p class="text-base text-center text-gray-400 dark:text-gray-700 mb-8 max-w-2xl mx-auto md:text-xl">
         Aquí encontrarás nuestros horarios semanales. ¡Entrena a tu propio ritmo y lleva tu jiu-jitsu al siguiente nivel!
-      
       </p>
 
-      <div class="space-y-10">
-        {schedule.map(({ day, classes }) => (
-          <div>
-            <h3 class="text-2xl font-bold text-red-500 mb-4">{day}</h3>
-            <div class="grid md:grid-cols-2 gap-4">
-              {classes.map(cls => (
-                <div class="bg-gray-800 dark:bg-gray-200 rounded-xl p-4 shadow-lg">
-                  <p class="text-lg font-semibold text-white dark:text-gray-800">{cls.time}</p>
-                  <p class="text-gray-300 dark:text-gray-700">{cls.name} - {cls.coach}</p>
+      <div class="relative flex items-center justify-between md:hidden">
+        <button id="prevBtn" class="p-2 text-red-500 hover:text-red-400 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        
+        <div id="carouselContainer" class="overflow-hidden w-full">
+          <div id="carousel" class="flex transition-transform duration-300 ease-in-out">
+            {schedule.map(({ day, classes }) => (
+              <div class="carousel-item flex-shrink-0 w-full p-2">
+                <div class="bg-gray-800/50 dark:bg-gray-200/50 rounded-xl p-4 flex flex-col">
+                  <h3 class="text-xl font-bold text-red-500 mb-4 text-center">{day}</h3>
+                  <div class="space-y-4">
+                    {classes.map(cls => (
+                      <ScheduleCard {...cls} />
+                    ))}
+                  </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <button id="nextBtn" class="p-2 text-red-500 hover:text-red-400 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="hidden md:grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5 md:gap-6">
+        {schedule.map(({ day, classes }) => (
+          <div class="bg-gray-800/50 dark:bg-gray-200/50 rounded-xl p-4 flex flex-col">
+            <h3 class="text-xl font-bold text-red-500 mb-4 text-center md:text-2xl">{day}</h3>
+            <div class="space-y-4">
+              {classes.map(cls => (
+                <ScheduleCard {...cls} />
               ))}
             </div>
           </div>
