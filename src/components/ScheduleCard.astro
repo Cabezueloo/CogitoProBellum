@@ -1,0 +1,9 @@
+---
+// 1. Recibimos las propiedades (props) que necesita el componente
+const { time, name, coach } = Astro.props;
+---
+
+<div class="bg-gray-800 dark:bg-gray-200 rounded-xl p-4 shadow-lg">
+  <p class="text-lg font-semibold text-white dark:text-gray-800">{time}</p>
+  <p class="text-gray-300 dark:text-gray-700">{name} - {coach}</p>
+</div>
