@@ -18,7 +18,7 @@ export const schedule = [
   {
     day: "Martes",
     classes: [
-      { time: "09:00 - 10:00", name: "Adults NoGi", coach: COACHES.GOMEZ },
+      { time: "10:30 - 11:30", name: "Adults NoGi", coach: COACHES.GOMEZ },
       { time: "16:00 - 17:15", name: "MMA", coach: COACHES.GOMEZ },
       { time: "17:30 - 18:30", name: "Kids BJJ", coach: COACHES.GOMEZ },
     ],
@@ -34,7 +34,7 @@ export const schedule = [
   {
     day: "Jueves",
     classes: [
-      { time: "09:00 - 10:00", name: "Adults NoGi", coach: COACHES.GOMEZ },
+      { time: "10:30 - 11:30", name: "Adults NoGi", coach: COACHES.GOMEZ },
       { time: "16:00 - 17:15", name: "MMA", coach: COACHES.GOMEZ },
       { time: "17:30 - 18:30", name: "Kids BJJ", coach: COACHES.GOMEZ },
     ],
