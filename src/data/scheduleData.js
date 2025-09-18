@@ -10,41 +10,41 @@ export const schedule = [
   {
     day: "Lunes",
     classes: [
-      { time: "09:00 - 10:00", name: "Adults BJJ", coach: COACHES.MATILLA },
-      { time: "11:00 - 12:00", name: "MMA", coach: COACHES.MATILLA },
-      { time: "18:00 - 19:00", name: "Adults BJJ", coach: COACHES.CABEZUELO },
+      { time: "09:00 - 10:00", name: "Adults BJJ" },
+      { time: "11:00 - 12:00", name: "MMA" },
+      { time: "18:00 - 19:00", name: "Adults BJJ" },
     ],
   },
   {
     day: "Martes",
     classes: [
-      { time: "10:30 - 11:30", name: "Adults NoGi", coach: COACHES.GOMEZ },
-      { time: "16:00 - 17:15", name: "MMA", coach: COACHES.GOMEZ },
-      { time: "17:30 - 18:30", name: "Kids BJJ", coach: COACHES.GOMEZ },
+      { time: "10:30 - 11:30", name: "Adults NoGi",  },
+      { time: "16:00 - 17:15", name: "MMA",  },
+      { time: "17:30 - 18:30", name: "Kids BJJ",  },
     ],
   },
   {
     day: "Miércoles",
     classes: [
-      { time: "09:00 - 10:00", name: "Adults BJJ", coach: COACHES.MATILLA },
-      { time: "11:00 - 12:00", name: "MMA", coach: COACHES.MATILLA },
-      { time: "18:00 - 19:00", name: "Adults BJJ", coach: COACHES.CABEZUELO },
+      { time: "09:00 - 10:00", name: "Adults BJJ",  },
+      { time: "11:00 - 12:00", name: "MMA",  },
+      { time: "18:00 - 19:00", name: "Adults BJJ",  },
     ],
   },
   {
     day: "Jueves",
     classes: [
-      { time: "10:30 - 11:30", name: "Adults NoGi", coach: COACHES.GOMEZ },
-      { time: "16:00 - 17:15", name: "MMA", coach: COACHES.GOMEZ },
-      { time: "17:30 - 18:30", name: "Kids BJJ", coach: COACHES.GOMEZ },
+      { time: "10:30 - 11:30", name: "Adults NoGi",  },
+      { time: "16:00 - 17:15", name: "MMA",  },
+      { time: "17:30 - 18:30", name: "Kids BJJ",  },
     ],
   },
   {
     day: "Viernes",
     classes: [
-      { time: "09:00 - 10:00", name: "Adults BJJ", coach: COACHES.MATILLA },
-      { time: "11:00 - 12:00", name: "MMA", coach: COACHES.MATILLA },
-      { time: "18:00 - 19:00", name: "Adults BJJ", coach: COACHES.CABEZUELO },
+      { time: "09:00 - 10:00", name: "Adults BJJ",  },
+      { time: "11:00 - 12:00", name: "MMA",  },
+      { time: "18:00 - 19:00", name: "Adults BJJ",  },
     ],
   },
 ];
